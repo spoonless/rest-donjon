@@ -19,7 +19,7 @@ public class SalleRepresentation extends RepresentationModel<SalleRepresentation
 		for(var porte : salle.getPortes().entrySet()) {
 			Link porteLink = linkTo(DonjonControleur.class).slash(porte.getValue().getId())
 					                                       .withRel(PORTE_LINK_REL)
-					                                       .withName(porte.getKey());
+					                                       .withTitle(porte.getKey());
 			this.add(porteLink);
 		}
 		if (!salle.hasPortes()) {
@@ -33,7 +33,7 @@ public class SalleRepresentation extends RepresentationModel<SalleRepresentation
 	}
 
 	private Link genererLinkEntree() {
-		return linkTo(DonjonControleur.class).withRel(ENTREE_LINK_REL).withName("Retour à l'entrée du donjon");
+		return linkTo(DonjonControleur.class).withRel(ENTREE_LINK_REL).withTitle("Retour à l'entrée du donjon");
 	}
 	
 	public String getDescription() {
