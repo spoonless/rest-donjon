@@ -27,12 +27,12 @@ public class DonjonControleur {
 		return salleRepresentation;
 	}
 
-	@GetMapping(path="/", produces = "application/json")
+	@GetMapping(path="/", produces = "application/hal+json")
 	public SalleRepresentation entrer() throws SalleIntrouvableException {
 		return getSalle(donjon.getEntree().getId());
 	}
 
-	@GetMapping(path="/{id}", produces = "application/json")
+	@GetMapping(path="/{id}", produces = "application/hal+json")
 	public SalleRepresentation getSalle(@PathVariable String id) throws SalleIntrouvableException {
 		Salle salle = donjon.getById(id).orElseThrow(SalleIntrouvableException::new);
 		return new SalleRepresentation(salle);
