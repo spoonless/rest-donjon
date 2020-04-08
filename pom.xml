@@ -7,11 +7,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<!-- précisez le nom et l'email de chaque membre de votre groupe -->
 	<developers>
 		<developer>
-			<name>VOTRE_NOM</name>
-			<email>VOTRE_EMAIL</email>
+			<name>David Gayerie</name>
+			<email>dgaydevel@free.fr</email>
 		</developer>
 	</developers>
 
